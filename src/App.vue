@@ -1,30 +1,30 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <the-header></the-header>
+  <main class="main">
+    <router-view />
+  </main>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container {
+  max-width: 1310px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
 }
 </style>
+<script>
+import TheHeader from "@/components/TheHeader";
+
+export default {
+  components: { TheHeader },
+};
+</script>
