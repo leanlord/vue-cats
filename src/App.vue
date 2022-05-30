@@ -1,6 +1,6 @@
 <template>
   <the-header></the-header>
-  <main class="main">
+  <main class="main container">
     <router-view />
   </main>
 </template>
@@ -12,10 +12,13 @@
   margin: 0;
 }
 .container {
-  max-width: 1310px;
+  max-width: 1340px;
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
+}
+.main {
+  margin-bottom: 40px;
 }
 * {
   box-sizing: border-box;
